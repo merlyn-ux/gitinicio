@@ -1,0 +1,200 @@
+ls
+
+lista los dorectorios
+
+CREARDIRECTORIO
+
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~ (master)
+$ cd Desktop/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop (master)
+$ cd Git2022/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022 (master)
+
+dentro del directorio creo una carpeta repo
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022 (master)
+$ cd repo/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo (master)
+$
+
+para ver si tiene archivos esa carpeta repo
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo (master)
+$ ls -ltr
+total 0
+
+creacion de repositorio
+
+primera manera: esta vacio y no tengo nada
+
+en esa misma linea dentro d erepo
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo (master)
+$ mkdir repositorioinicial
+
+me muevo a esa carpeta asi:
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo (master)
+$ cd repositorioinicial/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$
+
+
+como paso de directorio a repositorio: lo logro con git init.
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git init
+Initialized empty Git repository in C:/Users/Softcap/Desktop/Git2022/repo/repositorioinicial/.git/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$
+
+dato al convertirlo en reposotorio luego del git aparece una mapalbra MASTER.
+es la rama principal en la que estamos parados.
+
+las ramas son ramificaciones donde se va a trabajar el codigo de manera aislada.
+
+
+
+Repositorio local y Repositorio Remoto.
+
+repositorio local
+
+es el que tenemos en el dorectorio creado el git que esta en la pc.
+
+
+Repositorio Remoto:
+
+giu hub . Gitlab aquellos que estan fuera de mi maquina.
+codigo visible para el resto.
+
+
+realice un cambio coloque una carpeta
+
+GIT STATUS
+
+nos da un informe de como esta el archivo actualmente
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        archivo1.txt/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+QUE UN ARCHIVO ESTE EN 
+Untracked files:
+
+significa que no esta llevando a cabo los cambiosa, git no lo esta controlando
+
+
+COMO HAGO PARA QUE GIT LLEVE EL REGISTRO DEL ARCHIVO.
+
+lo realizo con git add
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git add archivo1.txt
+
+luego aplico git status
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo1.txt/linea unooo.txt
+
+fija que cambio de stadio;
+
+Changes to be committed:
+
+esta listo para commitiar
+
+
+ git commit -m "version prueba uno"
+
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git commit -m "version prueba uno"
+[master (root-commit) 9c602ec] version prueba uno
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo1.txt/linea unooo.txt
+
+fueron creados 
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git commit -m "version prueba uno"
+[master (root-commit) 9c602ec] version prueba uno
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo1.txt/linea unooo.txt
+
+luego si aplico un git status
+
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+working tree clean indica que todos los cambios estan confirmados
+
+
+QUE SUCEDE SI MODIFICO ESE MISMO ARCHIVO. Y LE DOY GIT STATUS
+
+
+modifique mia rchivo en el local
+
+al dar git status.
+
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        archivo1.txt/LINEA DOS COLORES PRIMARIOS.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+debo aplicar los mismos apsos de inicio esta en Untracked files:
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git add archivo1.txt/
+
+Softcap@DESKTOP-MK5VD81 MINGW64 ~/Desktop/Git2022/repo/repositorioinicial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   archivo1.txt/LINEA DOS COLORES PRIMARIOS.txt
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
